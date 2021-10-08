@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>week 6: javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+  </head>
+
+
+
+  <body>
+    <section id="hero">
+      <h1 id="heroText">Welcome  To My Site</h1>
+      <img src="original.jpg" alt="fancy star wars pic" id="heroimg">
+
+    </section>
+
+    <section id="one">
+      <h2>This is My First Section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section id="two">
+      <h2>This is My Second Section</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section id="three">
+      <h2>This Section Contains <span id="flashyButton">Buttons</span></h2>
+
+      <button id="myButton">Click This Button To Win</button>
+      <button id="myButton2">You Can Also Click This Button To Win</button>
+    </section>
+    <section id="four">
+      <h2>This Section Is For Week 6 Homework</h2>
+      <button id="myButton3">Change The Hero Image!</button>
+      <br>
+      <button id="myButton4"">Change It Back!</button>
+    </section>
+    <br>
+
+
+
+
+
+  <script type="text/javascript">
+    console.log("javascript working");
+    document.getElementById("myButton").addEventListener("click", function(){alert("Congrats! You Have Won!")});
+    document.getElementById("myButton2").addEventListener("click", buttonClicked);
+    function buttonClicked(){
+      alert("Congrats! You Have Won.");
+      document.getElementById("heroText").innerHTML = "You Are No Longer Welcome Here";
+    }
+
+
+    var blink_speed = 500;
+var t = setInterval(function () {
+    var flash = document.getElementById('flashyButton');
+    flash.style.visibility = (flash.style.visibility == 'hidden' ? '' : 'hidden');
+}, blink_speed);
+
+
+    document.getElementById("myButton3").addEventListener("click", clicked);
+    function clicked(){
+      var img = document.getElementById("heroimg");
+      img.src="palpatine.png";
+      return false;
+    }
+
+
+    document.getElementById("myButton4").addEventListener("click", clicked1);
+    function clicked1(){
+      var img = document.getElementById("heroimg");
+      img.src="original.jpg";
+      return false;
+    }
+
+
+
+
+  </script>
+
+
+  </body>
+</html>
