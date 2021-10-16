@@ -1,0 +1,62 @@
+body{
+  font-family: helvetica;
+  background-color: black
+}
+
+
+h1{
+  font-size: 90px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+#one{
+  font-size: 25px;
+  font-style: italic;
+  color:white;
+  text-align: center;
+  margin-top: -80px;
+}
+
+#section2{
+  background-color: white;
+  text-align: center;
+  padding: .5vw;
+  margin: 5vw 20vw 5vw 20vw;
+  border-radius: 40px;
+
+}
+
+#quoteinator{
+  color: red;
+
+}
+
+button{
+  color:red;
+  font-size: 30px;
+  background-color: white;
+  border: 0px;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+button:hover{
+  color: red;
+  font-size: 29px;
+
+}
+
+button:active{
+  color: red;
+  font-size: 28px
+}
+
+p{
+  font-size: 20px;
+  font-style: italic;
+  color:black;
+
+}
