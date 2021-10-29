@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" onclick="jump()">
+  <head>
+    <meta charset="utf-8">
+    <title>Midterm Block Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <body>
+    <section id="section1">
+      <h1><span id="pumpkin">Pumpkin</span> Jump!</h1>
+    </section>
+
+    <section>
+      <p id="instructions">Be careful to hit the pumpkins! If you lose, click "OK" on the pop-up to play again!</p>
+    </section>
+
+    <section id="section4">
+      <h1 id="score"> 0 </h1>
+    </section>
+
+
+    <section id="section2">
+      <div id="blockGame">
+        <div id="character"></div>
+        <div id="block"></div>
+      </div>
+    </section>
+
+    <script>
+
+      var character = document.getElementById("character");
+
+      var block = document.getElementById("block");
+
+      var counter = 0
+
+      function jump(){
+        character.classList.add("hopAnimation");
+        setTimeout(function(){
+          character.classList.remove("hopAnimation");
+        },400)
+      }
+
+      var hitBlock = setInterval(function(){
+        var characterTop =
+        parseInt(window.getComputedStyle(character) .getPropertyValue("top"));
+
+        var obstacleBlock =
+        parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+
+        if(obstacleBlock<60 && obstacleBlock>-60 && characterTop>=220){
+          block.style.animation = "none";
+          alert("Pathetic. Truly Dreadful. Your score was " + Math.floor(counter/100) + ". Click 'Okay' to Restart.")
+          counter = 0
+          block.style.animation = "block 1s infinite linear"
+
+        }else{
+          counter += 1
+          document.getElementById("score").innerHTML = Math.floor(counter/100);
+          document.getElementById('score').innerHTML = "Score: " + Math.floor(counter/100);
+        }
+      },10);
+
+
+    </script>
+  </body>
+
+</html>
