@@ -1,0 +1,73 @@
+body{
+  font-family: helvetica;
+}
+
+#hero{
+  background-color: #444;
+  background-image:url('257008.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding:1em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  color: orange;
+  font-size: 100px;
+  border: 4px solid white;
+  padding:  10px 50px 10px 50px;
+  margin: -10px;
+  font-weight: bold;
+}
+
+#flexboxspan{
+  color: orange;
+}
+
+#lastname{
+  color: white;
+  font-weight: normal;
+}
+
+p{
+  color: white;
+  font-size: 30px;
+}
+
+.descrip{
+  color: black;
+  font-size: 20px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+#things{
+  padding: 10vh 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bottomSection{
+  background-color: #444;
+  background-image: url('257008.jpg');
+  text-align: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 1em;
+
+}
+
+#TheEnd{
+  color: white;
+  font-size: 100px;
+  padding: 250px 0px 250px 0px;
+  border: 0px solid black;
+}
